@@ -14,7 +14,7 @@ export class PlanetDetailComponent implements OnInit {
   }
 
   deletePlanet(){
-    this.store.planets.pop();
+    
   }
 
 }
