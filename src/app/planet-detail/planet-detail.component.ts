@@ -13,6 +13,8 @@ export class PlanetDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+  deletePlanet(){
+    this.store.planets.pop();
+  }
 
 }
