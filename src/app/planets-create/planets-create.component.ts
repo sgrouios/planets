@@ -9,9 +9,7 @@ import { Planet } from '../planet';
 })
 export class PlanetsCreateComponent implements OnInit {
 
-  name: string;
-  moons: number;
-  distanceFromSun: number;
+  planet: Planet;
 
   constructor(private store: PlanetStoreService) { }
 
@@ -19,8 +17,7 @@ export class PlanetsCreateComponent implements OnInit {
   }
 
   createPlanet(){
-    let planet = new Planet(this.name, this.moons, this.distanceFromSun);
-    this.store.addPlanet(planet);
+    this.store.addPlanet(this.planet);
   }
   
 

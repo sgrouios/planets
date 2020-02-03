@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetStoreService } from '../planet-store.service';
+import {Planet} from '../planet';
 
 @Component({
   selector: 'app-planets-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsListComponent implements OnInit {
 
-  constructor() { }
+  clicked: boolean;
+  planets: Planet[];
+
+  constructor(store: PlanetStoreService) { }
 
   ngOnInit() {
   }
 
+  btnClicked(){
+    this.clicked = true;
+  }
 }
