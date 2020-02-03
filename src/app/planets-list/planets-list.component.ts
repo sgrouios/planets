@@ -12,12 +12,12 @@ export class PlanetsListComponent implements OnInit {
   clicked: boolean;
   planets: Planet[];
 
-  constructor(store: PlanetStoreService) { }
-
+  constructor(private store: PlanetStoreService) { }
   ngOnInit() {
   }
 
   btnClicked(){
     this.clicked = true;
+    this.planets = this.store.getPlanets();  
   }
 }

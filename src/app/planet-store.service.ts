@@ -18,4 +18,8 @@ export class PlanetStoreService {
     this.planets.sort((a, b) => (a.distanceFromSun > b.distanceFromSun) ? 1 : -1);
   }
 
+  getPlanets(): Planet[]{
+    return this.planets;
+  }
+
 }
