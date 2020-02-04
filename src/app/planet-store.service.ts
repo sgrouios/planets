@@ -19,7 +19,7 @@ export class PlanetStoreService {
   }
 
   sortPlanets(){
-    this.planets.sort((a, b) => (a.name > b.name) ? 1 : -1);
+    this.planets.sort((a, b) => (a.name > b.name) ? 1 : -1);  
   }
 
   getPlanets(): Planet[]{
