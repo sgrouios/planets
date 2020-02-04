@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PlanetStoreService } from '../planet-store.service';
-import { Planet } from '../planet';
 
 @Component({
   selector: 'app-planets-create',
@@ -19,10 +18,19 @@ export class PlanetsCreateComponent implements OnInit {
   }
 
   createPlanet(){
-    if(this.store.showPlanetBool){
+    if(!this.store.createBool){
+      this.store.createBool = true;
       this.store.showPlanetBool = false;
+      this.store.showPlanetBool = false;
+      this.store.selectedPlanet = null;
     }
-    this.store.addPlanet({name: this.name, moons: this.moons, distanceFromSun: this.distance});
+    else{
+      this.store.addPlanet({name: this.name, moons: this.moons, distanceFromSun: this.distance});
+      if(this.store.showPlanetBool){
+        this.store.showPlanetBool = false;
+      }
+    }
+
   }
   
 

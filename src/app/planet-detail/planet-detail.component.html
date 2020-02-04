@@ -1,3 +1,17 @@
-<div>
-    <label>Planet Name</label>
+<div class="details" *ngIf="this.store.selectedPlanet && this.store.showDetailsBool === true">
+    <div>
+        <label>Planet Name</label>
+        <input placeholder="Planet Name" [(ngModel)]="this.store.selectedPlanet.name">
+    </div>
+    <div>
+        <label>Number of Moons</label>
+        <input placeholder="Number of Moons" [(ngModel)]="this.store.selectedPlanet.moons">
+    </div>
+    <div>
+        <label>Distance from Sun</label>
+        <input placeholder="Distance from the Sun" [(ngModel)]="this.store.selectedPlanet.distanceFromSun">
+    </div>
+    <div>
+        <button (click)="deletePlanet()">Delete Planet</button>
+    </div>
 </div>

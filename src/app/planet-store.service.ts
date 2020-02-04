@@ -7,7 +7,10 @@ import {Planet} from './planet';
 export class PlanetStoreService {
 
   planets: Planet[] = [{name: "Earth", moons: 1, distanceFromSun: 1}, {name: "Mars", moons: 1, distanceFromSun: 1}];
+  selectedPlanet: Planet;
   showPlanetBool: boolean;
+  showDetailsBool: boolean;
+  createBool: boolean = true;
 
   constructor() { }
 
@@ -16,11 +19,19 @@ export class PlanetStoreService {
   }
 
   sortPlanets(){
-    this.planets.sort((a, b) => (a.distanceFromSun > b.distanceFromSun) ? 1 : -1);
+    this.planets.sort((a, b) => (a.name > b.name) ? 1 : -1);
   }
 
   getPlanets(): Planet[]{
     return this.planets;
+  }
+
+  removePlanet(){
+    for(var i = 0; i < this.planets.length; i++){
+      if(this.planets[i].name == this.selectedPlanet.name){
+        this.planets.splice(i, 1);
+      }
+    }
   }
 
 }

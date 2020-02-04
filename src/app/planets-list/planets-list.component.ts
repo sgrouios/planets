@@ -17,6 +17,13 @@ export class PlanetsListComponent implements OnInit {
 
   showPlanets(){
     this.store.showPlanetBool = true;
+    this.store.createBool = false;
+    this.store.sortPlanets();
     this.planets = this.store.getPlanets();  
+  }
+
+  selectPlanet(planet: Planet){
+    this.store.selectedPlanet = planet;
+    this.store.showDetailsBool = true;
   }
 }

@@ -1,0 +1,20 @@
+.details{
+    text-align: center;
+}
+label{
+    display: inline-block;
+    text-align: left;
+    width: 200px;
+    color: rgb(230, 230, 0);
+    font-family: 'Cooper Black';
+}
+div{
+    margin-top: 20px;
+}
+button{
+    font-family: 'Aharoni';
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 150px;
+}
