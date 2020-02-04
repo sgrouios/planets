@@ -6,7 +6,8 @@ import {Planet} from './planet';
 })
 export class PlanetStoreService {
 
-  planets: Planet[] = [];
+  planets: Planet[] = [{name: "Earth", moons: 1, distanceFromSun: 1}, {name: "Mars", moons: 1, distanceFromSun: 1}];
+  showPlanetBool: boolean;
 
   constructor() { }
 

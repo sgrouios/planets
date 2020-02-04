@@ -1,10 +1,15 @@
-<button (click)="btnClicked()">Show planets</button>
-<div *ngIf="clicked==true">
-<div *ngIf="planets.length !==0; else noPlanets">
-    <ul *ngFor="let planet of planets">{{planet.name}}</ul>
+<div class="showPlanetButton">
+    <button (click)="showPlanets()">Show planets</button>
+</div>
+
+<div *ngIf="this.store.showPlanetBool">
+    <div class="displayOutput">
+        <div *ngIf="planets.length !==0; else noPlanets">
+            <li *ngFor="let planet of planets">{{planet.name}}</li>
+        </div>
+    </div>
 </div>
 
 <ng-template #noPlanets>
-    <div>There are no planets currently stored</div>
+    <div class="displayOutput">There are no planets currently stored</div>
 </ng-template>
-</div>

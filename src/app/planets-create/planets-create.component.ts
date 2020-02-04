@@ -19,6 +19,9 @@ export class PlanetsCreateComponent implements OnInit {
   }
 
   createPlanet(){
+    if(this.store.showPlanetBool){
+      this.store.showPlanetBool = false;
+    }
     this.store.addPlanet({name: this.name, moons: this.moons, distanceFromSun: this.distance});
   }
   

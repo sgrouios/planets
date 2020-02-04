@@ -9,15 +9,14 @@ import {Planet} from '../planet';
 })
 export class PlanetsListComponent implements OnInit {
 
-  clicked: boolean;
   planets: Planet[];
 
   constructor(private store: PlanetStoreService) { }
   ngOnInit() {
   }
 
-  btnClicked(){
-    this.clicked = true;
+  showPlanets(){
+    this.store.showPlanetBool = true;
     this.planets = this.store.getPlanets();  
   }
 }

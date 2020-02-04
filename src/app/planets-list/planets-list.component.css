@@ -1,7 +1,37 @@
-button{
-    margin:  auto;
-    display: block;
-}
 div{
     text-align: center;
+}
+.showPlanetButton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.displayOutput{
+    color: springgreen;
+    max-width: 350px;
+    text-align: center;
+    margin: 10px auto 10px auto;
+}
+.displayOutput li{
+    color: rgb(194, 92, 19);
+    font-size: 20px;
+    font-family: 'Cooper Black';
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: turquoise;
+    width: 15em;
+}
+.displayOutput li:hover{
+    cursor: pointer;    
+
+}
+button{
+    font-family: 'Aharoni';
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 150px;
 }
