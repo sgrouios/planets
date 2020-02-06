@@ -8,12 +8,12 @@ label{
     display: inline-block;
     text-align: left;
     width: 200px;
-    color: rgb(230, 230, 0);
-    font-family: 'Cooper Black';
+    color: rgba(247, 246, 250, 0.836);
+    font-family: 'Consolas';
 }
 h1{
-    color: rgb(230, 230, 0);
-    font-family: 'Cooper Black';
+    color: rgba(247, 246, 250, 0.836);
+    font-family: 'Consolas';
     font-size: 40px;
 }
 input{
